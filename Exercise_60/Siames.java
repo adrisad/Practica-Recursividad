@@ -3,11 +3,11 @@ package PracticaRecursividad.Exercise_60;
 public class Siames {
     public boolean isSiames(int number){
         boolean res=false;
-        if (number%3==0) {
-            String number1 =number+"";
-            int mitad=number1.length()/2;
-            String word1=separarPalabra(number1, 0, mitad);
-            String word2=separarPalabra(number1, mitad, number1.length());
+        String numeroTransformado =number+"";
+        if (numeroTransformado.length()%3==0) {
+            int mitad=numeroTransformado.length()/2;
+            String word1=separarPalabra(numeroTransformado, 0, mitad);
+            String word2=separarPalabra(numeroTransformado, mitad, numeroTransformado.length());
             if (word1.equals(word2)) {
                 res=true;
             }
